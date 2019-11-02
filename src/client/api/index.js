@@ -1,40 +1,11 @@
 import axios from 'axios';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { apiPrefix } from '../../etc/config.json';
 import { prefixApi } from '../../etc/configTest.json';
-import {fetchBooks, fetchBookId} from '../actions/BookActions';
 import {addAnswer, createQuestion, deleteQuestions, fetchQuestion, fetchQuestions, updateQuestion} from "../actions/QuestionActions";
 /**
  * Получить книги
  */
-export const fetchAllBooks = () => {
-    return (dispatch) => {
-       return axios.get(`${apiPrefix}/api/books`)
-            .then(response => {
-                dispatch(fetchBooks(response.data))
-            })
-            .catch(error => {
-                throw(error);
-            });
-    };
-};
-
-/**
- * Получить книгу
- */
-export const fetchBook = (id) => {
-    return (dispatch) => {
-       return axios.get(`${apiPrefix}/api/book/${id}`)
-            .then(response => {
-                console.log(id);
-                dispatch(fetchBookId(response.data))
-            })
-            .catch(error => {
-                throw(error);
-            });
-    };
-};
 
 //получить все вопросы
 export const fetchAllQuestions = () => {
@@ -91,13 +62,14 @@ export const updateOnehQuestion = (id) => {
 //создание Question
 export const createOneQuestion = (description) => {
     return (dispatch) => {
-        return axios.post(`${prefixApi}/question`,{
-            description: description
-        })
+        return axios.post(`${prefixApi}/question`,{description: description},
+            {headers: {"Content-Type": "application/json"}})
             .then(response => {
+                console.log(response.status);
                 dispatch(createQuestion(response.data))
             })
             .catch(error => {
+                console.log(error);
                 throw(error);
             })
     }

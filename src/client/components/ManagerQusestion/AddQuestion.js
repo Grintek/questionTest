@@ -72,8 +72,9 @@ class AddQuestion extends Component {
 
 function mapDispatchToProps(dispatch){
     return{
-        createOneQuestion(){
-            dispatch(createOneQuestion());
+        createOneQuestion(state){
+            console.log(state);
+            dispatch(createOneQuestion(state));
         }
     }
 }
