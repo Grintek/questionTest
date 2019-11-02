@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import connect from "react-redux/es/connect/connect";
 import {createOneQuestion} from "../../api";
 import PropType from "prop-types";
+import {redirectTo} from "@reach/router";
 
 
 class AddQuestion extends Component {
@@ -23,7 +24,6 @@ class AddQuestion extends Component {
 
     static propTypes = {
         createOneQuestion: PropType.func.isRequired,
-        questing: PropType.object.isRequired
     };
 
     componentDidMount() {
@@ -44,7 +44,6 @@ class AddQuestion extends Component {
 
     handleChange(event){
         this.setState({description: event.target.value});
-        console.log('email was changed', event.target.value);
     }
 
     onclickRedirect(){
@@ -52,9 +51,9 @@ class AddQuestion extends Component {
        this.setState({cancel: true});
     }
     render(){
-       // if(this.state.redirect === true && this.state.description !== "" || this.state.cancel === true){
-       //     return redirectTo("/manager")
-       // }
+       if(this.state.redirect === true & this.state.description !== "" || this.state.cancel === true){
+           return redirectTo("/manager")
+       }
 
         return(
             <div>
@@ -79,10 +78,4 @@ function mapDispatchToProps(dispatch){
     }
 }
 
-function mapStateToProps(state) {
-    return{
-        questing: state
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(AddQuestion);
+export default connect(null, mapDispatchToProps)(AddQuestion);

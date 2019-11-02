@@ -62,7 +62,7 @@ export const updateOnehQuestion = (id) => {
 //создание Question
 export const createOneQuestion = (description) => {
     return (dispatch) => {
-        return axios.post(`${prefixApi}/question`,{description: description},
+        return axios.post(`${prefixApi}/questions`,{description: description},
             {headers: {"Content-Type": "application/json"}})
             .then(response => {
                 console.log(response.status);
@@ -78,7 +78,7 @@ export const createOneQuestion = (description) => {
 //добавление Answer
 export const addOneAnswer = () => {
     return (dispatch) => {
-        return axios.post(`${prefixApi}/question`)
+        return axios.post(`${prefixApi}/questions`)
             .then(response => {
                 dispatch(addAnswer(response.data))
             })
