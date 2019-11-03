@@ -25,7 +25,8 @@ class EditQuestion extends Component{
         this.submitSave = this.submitSave.bind(this);
         this.onclickRedirect = this.onclickRedirect.bind(this);
         this.inputDesk = this.inputDesk.bind(this);
-        this.radioChecked = this.radioChecked.bind(this)
+        this.radioChecked = this.radioChecked.bind(this);
+        this.toggleCheckbox = this.toggleCheckbox.bind(this);
     }
 
     static propTypes = {
@@ -57,6 +58,7 @@ class EditQuestion extends Component{
       }else{
           this.selectedCheckboxes.add(label);
       }
+      console.log(Array.from(this.selectedCheckboxes));
     };
 
 
@@ -67,12 +69,10 @@ class EditQuestion extends Component{
     };
 
     submitSave(){
-        for (const checkbox of this.selectedCheckboxes){
-            alert(`id checked ${checkbox}`);
-        }
-      alert(this.state.selectCorrect);
-      alert(this.state.description);
+        Array.from(this.selectedCheckboxes);
 
+        this.props.updateOneQuestion(this.props.id, this.state.description, );
+        this.props.fetchOneQuestion(this.props.id);
     }
 
     onclickRedirect(){
@@ -103,7 +103,7 @@ class EditQuestion extends Component{
                 <table className="tb">
                     <tbody>
                     <tr><th className="tb tb_column_left">Answer</th><th className="tb tb_column_right">Correct</th><th className="tb tb_column_right">Delete</th></tr>
-                    {question.answers.map((e) => <Answers func={this.radioChecked} correct={this.state.selectCorrect} key={e.id} value={e}/>)}
+                    {question.answers.map((e) => <Answers checkbox={this.toggleCheckbox} func={this.radioChecked} correct={this.state.selectCorrect} key={e.id} value={e}/>)}
                     </tbody>
                 </table>
                 <div style={{width: "100%"}}>
@@ -116,16 +116,14 @@ class EditQuestion extends Component{
     }
 }
 
-
-
 function mapDispatchToProps(description) {
 
    return {
        fetchOneQuestion(id){
            description(fetchOneQuestion(id))
        },
-       updateOneQuestion(id){
-           description(updateOneQuestion(id))
+       updateOneQuestion(id, answer, desc){
+           description(updateOneQuestion(id, answer, desc))
        }
    }
 }

@@ -47,9 +47,12 @@ export const deleteQuestion = (id) => {
 };
 
 //обновление Question
-export const updateOneQuestion = (id) => {
+export const updateOneQuestion = (id, description, answer) => {
     return (dispatch) => {
-        return axios.put(`${prefixApi}/questions/${id}`)
+        return axios.put(`${prefixApi}/questions/${id}`,{
+            answers: answer,
+            description: description
+        })
             .then(response => {
                 dispatch(updateQuestion(response.data))
             })
