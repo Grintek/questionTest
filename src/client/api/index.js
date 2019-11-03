@@ -50,8 +50,8 @@ export const deleteQuestion = (id) => {
 export const updateOneQuestion = (id, description, answer) => {
     return (dispatch) => {
         return axios.put(`${prefixApi}/questions/${id}`,{
-            answers: answer,
-            description: description
+            description: description,
+            answers: answer
         })
             .then(response => {
                 dispatch(updateQuestion(response.data))

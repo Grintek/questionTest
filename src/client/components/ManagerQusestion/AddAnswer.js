@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {redirectTo} from "@reach/router";
-import {addOneAnswer, createOneQuestion} from "../../api";
+import {addOneAnswer} from "../../api";
 import connect from "react-redux/es/connect/connect";
 import PropType from "prop-types";
 

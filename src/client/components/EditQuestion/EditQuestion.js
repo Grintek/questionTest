@@ -42,13 +42,16 @@ class EditQuestion extends Component{
     componentDidMount()
     {
         this.props.fetchOneQuestion(this.props.id);
-
         axios.get(`${prefixApi}/questions/${this.props.id}`)
             .then(response => {
                 this.setState({description: response.data.description});
-                const answer = response.data.answers.find(x => x.correct === true);
-                this.setState({selectCorrect: answer.id})
 
+                const answer = response.data.answers.find(x => x.correct === true);
+
+                this.setState({selectCorrect: answer.id});
+
+
+                console.log(response.data.answers);
             })
     };
 
@@ -58,7 +61,7 @@ class EditQuestion extends Component{
       }else{
           this.selectedCheckboxes.add(label);
       }
-      console.log(Array.from(this.selectedCheckboxes));
+      console.log(this.selectedCheckboxes);
     };
 
 
@@ -69,10 +72,12 @@ class EditQuestion extends Component{
     };
 
     submitSave(){
-        Array.from(this.selectedCheckboxes);
+        const a = Array.from(this.selectedCheckboxes);
+        let d = this.props.quest.question.answers;
+        d = d.filter((item) => !a.includes(item));
+        console.log(d);
+        this.props.updateOneQuestion(this.props.id, this.state.description, d);
 
-        this.props.updateOneQuestion(this.props.id, this.state.description, );
-        this.props.fetchOneQuestion(this.props.id);
     }
 
     onclickRedirect(){
@@ -88,7 +93,6 @@ class EditQuestion extends Component{
         if(this.state.redirect === true){
             redirectTo(`/manager`)
         }
-
 
         const link = `/manager/${this.props.id}/answer`;
 
