@@ -21,7 +21,7 @@ export const fetchAllQuestions = () => {
 };
 
 //получить вопрос по id
-export const frtchOneQuestion = (id) => {
+export const fetchOneQuestion = (id) => {
     return (dispatch) => {
         return axios.get(`${prefixApi}/questions/${id}`)
             .then(response => {
@@ -47,7 +47,7 @@ export const deleteQuestion = (id) => {
 };
 
 //обновление Question
-export const updateOnehQuestion = (id) => {
+export const updateOneQuestion = (id) => {
     return (dispatch) => {
         return axios.put(`${prefixApi}/questions/${id}`)
             .then(response => {
@@ -76,9 +76,9 @@ export const createOneQuestion = (description) => {
 };
 
 //добавление Answer
-export const addOneAnswer = () => {
+export const addOneAnswer = (name, correct , id) => {
     return (dispatch) => {
-        return axios.post(`${prefixApi}/questions`)
+        return axios.post(`${prefixApi}/questions/${id}/answer`, { name: name, correct: correct })
             .then(response => {
                 dispatch(addAnswer(response.data))
             })

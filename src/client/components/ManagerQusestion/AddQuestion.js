@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import connect from "react-redux/es/connect/connect";
 import {createOneQuestion} from "../../api";
 import PropType from "prop-types";
@@ -23,7 +23,7 @@ class AddQuestion extends Component {
    }
 
     static propTypes = {
-        createOneQuestion: PropType.func.isRequired,
+        createOneQuestion: PropType.func.isRequired
     };
 
     componentDidMount() {

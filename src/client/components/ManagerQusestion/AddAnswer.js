@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import {redirectTo} from "@reach/router";
+import {addOneAnswer, createOneQuestion} from "../../api";
+import connect from "react-redux/es/connect/connect";
+import PropType from "prop-types";
 
 class AddAnswer extends Component{
     constructor(props){
@@ -18,9 +21,15 @@ class AddAnswer extends Component{
         this.onclickRedirect = this.onclickRedirect.bind(this);
 
     }
+
+    static propTypes = {
+        addOneAnswer: PropType.func.isRequired
+    };
+
     handleSubmit(){
         alert( `name ${this.state.name}`);
         alert( `checked ${this.state.correct}`);
+        this.props.addOneAnswer(this.state.name, this.state.correct, this.props.id);
     }
     handleChange(e){
         let a = e.target.value;
@@ -40,15 +49,21 @@ class AddAnswer extends Component{
         }
         return(
             <div>
-            <form onSubmit={this.handleSubmit}>
                 <label style={{ display: "block" }}>Answer:<input type="text" onChange={this.handleChange}/></label>
                 <label style={{ display: "block" }} >Is correct:<input type="checkbox" checked={this.state.correct} onChange={this.checkBox}/></label>
-                <button style={{ float: "left"}}>Create</button>
-            </form>
+                <button onClick={this.handleSubmit} style={{ float: "left"}}>Create</button>
                 <button  onClick={this.onclickRedirect}>Cancel</button>
             </div>
         )
     }
 }
 
-export default(AddAnswer);
+function mapDispatchToProps(dispatch){
+    return{
+        addOneAnswer(name, connect, id){
+            dispatch(addOneAnswer(name, connect, id));
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(AddAnswer);
