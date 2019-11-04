@@ -5,12 +5,20 @@ import Button from "@material-ui/core/Button";
 import connect from "react-redux/es/connect/connect"
 import {fetchAllQuestions} from "../../api/index"
 import {deleteQuestion} from "../../api";
+import PopupWindow from "./PopupWindow";
 
 
 class ListQuestion extends Component {
     constructor(props){
         super(props);
         this.props.fetchAllQuestions();
+
+        this.state = {
+            windowVisible: false
+        };
+
+        this.onWindow = this.onWindow.bind(this);
+        this.closeWindow = this.closeWindow.bind(this);
     }
     static propTypes = {
         fetchAllQuestions: PropType.func.isRequired,
@@ -37,6 +45,14 @@ class ListQuestion extends Component {
         console.log(this.props.quest);
     }
 
+    onWindow(){
+        this.setState({ windowVisible: true });
+    }
+
+    closeWindow(){
+        this.setState({ windowVisible: false });
+    }
+
 
     render() {
 
@@ -48,7 +64,7 @@ class ListQuestion extends Component {
                         className="tb tb_column_left">{e.description}</th>
                     <th style={{margin: 0}} className="tb tb_column_right">
                         <Button href={`/manager/${e.id}`} className="bt_edit">Edit</Button>
-                        <Button onClick={this.deleteQuestion.bind(this, e.id)} className="delete">Delete</Button>
+                        <Button onClick={this.onWindow} className="delete">Delete</Button>
                     </th>
                 </tr>
             )
@@ -64,6 +80,11 @@ class ListQuestion extends Component {
                     {values}
                     </tbody>
                 </table>
+                {
+                    this.state.windowVisible
+                        ? <PopupWindow closeWindow={this.closeWindow} onClickDelete={this.deleteQuestion}/>
+                        : null
+                }
                 <Button href={"/manager/question"} >Add New Question</Button>
             </div>
         )

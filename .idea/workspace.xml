@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff20bcab-593c-4068-b362-e82726413acb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/client/components/ListQuestion/PopupWindow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/actions/QuestionActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/actions/QuestionActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/api/redusers/questionReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/api/redusers/questionReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/components/EditQuestion/EditQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/components/EditQuestion/EditQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/components/ManagerQusestion/AddAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/components/ManagerQusestion/AddAnswer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/components/ManagerQusestion/AddQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/components/ManagerQusestion/AddQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/components/ManagerQusestion/ListQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/components/ListQuestion/ListQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/constants/AppConstants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/components/ListQuestion/ListQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/components/ListQuestion/ListQuestion.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/components/EditQuestion/EditQuestion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="67" column="42" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+            <state relative-caret-position="200">
+              <caret line="121" column="36" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -39,20 +32,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/components/ManagerQusestion/AddQuestion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="-75">
               <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/components/ListQuestion/ListQuestion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+            <state relative-caret-position="229">
+              <caret line="85" column="30" lean-forward="true" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/components/ListQuestion/PopupWindow.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -164,10 +166,12 @@
         <option value="$PROJECT_DIR$/src/client/actions/QuestionActions.js" />
         <option value="$PROJECT_DIR$/src/client/constants/AppConstants.js" />
         <option value="$PROJECT_DIR$/src/client/api/index.js" />
-        <option value="$PROJECT_DIR$/src/client/components/ListQuestion/ListQuestion.js" />
         <option value="$PROJECT_DIR$/src/client/components/ManagerQusestion/AddAnswer.js" />
         <option value="$PROJECT_DIR$/src/client/components/ManagerQusestion/AddQuestion.js" />
         <option value="$PROJECT_DIR$/src/client/components/EditQuestion/EditQuestion.js" />
+        <option value="$PROJECT_DIR$/src/client/components/ListQuestion/PopupWindou.js" />
+        <option value="$PROJECT_DIR$/src/client/components/ListQuestion/PopupWindow.js" />
+        <option value="$PROJECT_DIR$/src/client/components/ListQuestion/ListQuestion.js" />
       </list>
     </option>
   </component>
@@ -361,7 +365,7 @@
       <workItem from="1572701410010" duration="27605000" />
       <workItem from="1572731867673" duration="28820000" />
       <workItem from="1572798156371" duration="17568000" />
-      <workItem from="1572820464154" duration="19735000" />
+      <workItem from="1572820464154" duration="21367000" />
     </task>
     <task id="LOCAL-00001" summary=" commit">
       <created>1572669602653</created>
@@ -405,11 +409,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572821266305</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary=" commit">
+      <created>1572862536214</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572862536214</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111882000" />
+    <option name="totallyTimeSpent" value="113514000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1346" height="728" extended-state="0" />
@@ -700,10 +711,17 @@
     <entry file="file://$PROJECT_DIR$/src/client/NotFound.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/components/ListQuestion/ListQuestion.js">
+    <entry file="file://$PROJECT_DIR$/src/client/components/ListQuestion/PopupWindow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        <state relative-caret-position="150">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/components/EditQuestion/EditQuestion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="121" column="36" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -712,15 +730,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/components/ManagerQusestion/AddQuestion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="-75">
           <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/components/EditQuestion/EditQuestion.js">
+    <entry file="file://$PROJECT_DIR$/src/client/components/ListQuestion/ListQuestion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="67" column="42" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+        <state relative-caret-position="229">
+          <caret line="85" column="30" lean-forward="true" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
