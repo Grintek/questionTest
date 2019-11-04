@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { prefixApi } from '../../etc/configTest.json';
-import {addAnswer, createQuestion, deleteQuestions, fetchQuestion, fetchQuestions, updateQuestion} from "../actions/QuestionActions";
+import {addAnswer, createQuestion, deleteQuestions, fetchQuestion, fetchQuestions, updateQuestion, testQuestions} from "../actions/QuestionActions";
 /**
  * Получить книги
  */
@@ -12,6 +12,18 @@ export const fetchAllQuestions = () => {
         return axios.get(`${prefixApi}/questions`)
             .then(response => {
                 dispatch(fetchQuestions(response.data))
+            })
+            .catch(error => {
+                throw(error);
+            })
+    }
+};
+
+export const testAllQuestions = () => {
+    return (dispatch) => {
+        return axios.get(`${prefixApi}/test`)
+            .then(response => {
+                dispatch(testQuestions(response.data))
             })
             .catch(error => {
                 throw(error);

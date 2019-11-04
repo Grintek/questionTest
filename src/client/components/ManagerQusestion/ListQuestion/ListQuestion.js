@@ -1,10 +1,10 @@
 import React, {Component} from "react"
-import '../ManagerQusestion/StyleManager.scss'
+import '../StyleManager.scss'
 import PropType from 'prop-types';
 import Button from "@material-ui/core/Button";
 import connect from "react-redux/es/connect/connect"
-import {fetchAllQuestions} from "../../api/index"
-import {deleteQuestion} from "../../api";
+import {fetchAllQuestions} from "../../../api/index"
+import {deleteQuestion} from "../../../api";
 import PopupWindow from "./PopupWindow";
 
 
@@ -14,11 +14,13 @@ class ListQuestion extends Component {
         this.props.fetchAllQuestions();
 
         this.state = {
-            windowVisible: false
+            booleanUpdate: false,
+            windowVisible: false,
+            deleteId: null,
         };
 
         this.onWindow = this.onWindow.bind(this);
-        this.closeWindow = this.closeWindow.bind(this);
+
     }
     static propTypes = {
         fetchAllQuestions: PropType.func.isRequired,
@@ -30,29 +32,51 @@ class ListQuestion extends Component {
         this.props.fetchAllQuestions();
     }
 
-    componentWillMount() {
-        if(this.props.quest.questions.length === 0){
-            this.forceUpdate();
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log(prevProps.quest.questions.length);
+        console.log(this.props.quest.questions.length);
+        console.log(this.state.booleanUpdate, "componentDidUpdate");
+
+        if(this.props.quest.questions.length !== prevProps.quest.questions.length || this.state.booleanUpdate === true) {
+
+            this.props.fetchAllQuestions();
+
+            if (this.props.quest.questions.length !== prevProps.quest.questions.length) {
+                this.setState(state => {
+                    state.booleanUpdate = false
+                })
+            }
         }
     }
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        this.props.fetchAllQuestions();
-    }
 
-
-    deleteQuestion(id){
+    deleteQuestion= (id) =>{
         this.props.deleteQuestion(id);
         console.log(this.props.quest);
-    }
-
-    onWindow(){
-        this.setState({ windowVisible: true });
-    }
-
-    closeWindow(){
         this.setState({ windowVisible: false });
+        this.setState({ booleanUpdate: true });
+    };
+
+    onWindow(id){
+        console.log(id);
+        this.setState(state => ({
+            windowVisible: state.windowVisible = true,
+            deleteId: state.deleteId = id
+    }));
+        this.setState({ })
     }
 
+    closeWindow = () =>{
+        this.setState( state =>({windowVisible: state.windowVisible = false}));
+    };
+
+    popupWind(){
+        if(this.state.windowVisible === true) {
+            return (<PopupWindow values={this.state.deleteId} closed={this.closeWindow.bind(this)} delete={this.deleteQuestion} />);
+        }else{
+            return null;
+        }
+    }
 
     render() {
 
@@ -64,7 +88,7 @@ class ListQuestion extends Component {
                         className="tb tb_column_left">{e.description}</th>
                     <th style={{margin: 0}} className="tb tb_column_right">
                         <Button href={`/manager/${e.id}`} className="bt_edit">Edit</Button>
-                        <Button onClick={this.onWindow} className="delete">Delete</Button>
+                        <Button onClick={this.onWindow.bind(this, e.id)} className="delete">Delete</Button>
                     </th>
                 </tr>
             )
@@ -80,12 +104,10 @@ class ListQuestion extends Component {
                     {values}
                     </tbody>
                 </table>
-                {
-                    this.state.windowVisible
-                        ? <PopupWindow closeWindow={this.closeWindow} onClickDelete={this.deleteQuestion}/>
-                        : null
-                }
+
                 <Button href={"/manager/question"} >Add New Question</Button>
+
+                {this.popupWind()}
             </div>
         )
     }

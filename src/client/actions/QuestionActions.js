@@ -1,8 +1,15 @@
-import {QUESTION, QUESTIONS, ADD_ANSWER, CREATE_QUESTION, DELETE_QUESTION, UPDATE_QUESTION} from "../constants/QuestionConstants"
+import {QUESTION, QUESTIONS, ADD_ANSWER, CREATE_QUESTION, DELETE_QUESTION, UPDATE_QUESTION, QUESTIONS_TEST} from "../constants/QuestionConstants"
 
 export const fetchQuestions = (questions) => {
     return{
         type: QUESTIONS,
+        questions: questions
+    }
+};
+
+export const testQuestions = (questions) => {
+    return{
+        type: QUESTIONS_TEST,
         questions: questions
     }
 };

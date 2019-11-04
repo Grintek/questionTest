@@ -5,9 +5,9 @@ import {connect} from "react-redux/es/alternate-renderers";
 import PropType from "prop-types";
 import Answers from "./Answers";
 import InputDescription from "./InputDescription"
-import {fetchOneQuestion, updateOneQuestion} from "../../api";
+import {fetchOneQuestion, updateOneQuestion} from "../../../api";
 import axios from "axios";
-import { prefixApi } from '../../../etc/configTest';
+import { prefixApi } from '../../../../etc/configTest';
 
 
 class EditQuestion extends Component{
@@ -16,7 +16,7 @@ class EditQuestion extends Component{
         this.props.fetchOneQuestion(this.props.id);
 
         this.state = {
-            selectCorrect: 0,
+            selectCorrect: null,
             redirect: false,
             description: "",
             checked: false
@@ -36,9 +36,10 @@ class EditQuestion extends Component{
         quest: PropType.object.isRequired
     };
 
-    componentWillMount = () => {
+     componentWillMount(){
         this.selectedCheckboxes = new Set();
-    };
+    }
+
 
     componentDidMount()
     {
@@ -53,19 +54,24 @@ class EditQuestion extends Component{
                     this.setState({selectCorrect: answer.id});
                 }
 
-                console.log(response.data.answers);
             })
     };
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        //this.props.fetchOneQuestion(this.props.id);
-        const answer = this.props.quest.question.answers.find(x => x.correct === true);
 
-        if(this.state.selectCorrect !== answer.id) {
-            this.setState({selectCorrect: answer.id});
-        }
-        if(prevProps.quest.question.answers.length !== this.props.quest.question.answers.length){
-            this.props.fetchOneQuestion(this.props.id);
+        const answer1 = this.props.quest.question.answers.find(x => x.correct === true);
+        const answer2 = prevProps.quest.question.answers.find(x => x.correct === true);
+
+        if(answer1 !== undefined) {
+            if (answer1 !== answer2) {
+                if (this.state.selectCorrect !== answer1.id) {
+                    this.setState({selectCorrect: answer1.id});
+                }
+            }
+
+            if (this.props.quest.question.answers.length !== prevProps.quest.question.answers.length) {
+                this.props.fetchOneQuestion(this.props.id);
+            }
         }
     }
 
@@ -75,7 +81,6 @@ class EditQuestion extends Component{
       }else{
           this.selectedCheckboxes.add(label);
       }
-      console.log(this.selectedCheckboxes);
     };
 
 
@@ -89,8 +94,17 @@ class EditQuestion extends Component{
         const a = Array.from(this.selectedCheckboxes);
         let d = this.props.quest.question.answers;
         d = d.filter((item) => !a.includes(item));
-        console.log(d);
+
+        d.map((s) => {
+            if(s.id === this.state.selectCorrect){
+                s.correct = true
+            }else{
+                s.correct = false
+            }
+        });
+
         this.props.updateOneQuestion(this.props.id, this.state.description, d);
+
     }
 
     onclickRedirect(){
@@ -111,8 +125,6 @@ class EditQuestion extends Component{
 
         const question = this.props.quest.question;
 
-        console.log(this.state.description);
-        console.log(this.state.selectCorrect);
         return(
             <div>
                 <InputDescription input={this.inputDesk} values={this.state.description}/>
