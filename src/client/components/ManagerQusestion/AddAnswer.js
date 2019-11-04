@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {redirectTo} from "@reach/router";
 import {addOneAnswer} from "../../api";
 import connect from "react-redux/es/connect/connect";
 import PropType from "prop-types";
+import {Redirect} from "@reach/router";
 
 class AddAnswer extends Component{
     constructor(props){
@@ -19,7 +19,6 @@ class AddAnswer extends Component{
         this.handleChange = this.handleChange.bind(this);
         this.checkBox = this.checkBox.bind(this);
         this.onclickRedirect = this.onclickRedirect.bind(this);
-
     }
 
     static propTypes = {
@@ -27,9 +26,8 @@ class AddAnswer extends Component{
     };
 
     handleSubmit(){
-        alert( `name ${this.state.name}`);
-        alert( `checked ${this.state.correct}`);
         this.props.addOneAnswer(this.state.name, this.state.correct, this.props.id);
+        this.setState({redirect: true});
     }
     handleChange(e){
         let a = e.target.value;
@@ -43,16 +41,17 @@ class AddAnswer extends Component{
         this.setState({cancel: true});
     }
 
+
     render() {
-        if(this.state.redirect === true & this.state.name !== "" || this.state.cancel === true){
-            return redirectTo(`/manager/${this.props.id}`)
+        if(this.state.cancel === true || this.state.redirect === true) {
+           return <Redirect noThrow to={`manager/${this.props.id}`}/>
         }
         return(
             <div>
                 <label style={{ display: "block" }}>Answer:<input type="text" onChange={this.handleChange}/></label>
                 <label style={{ display: "block" }} >Is correct:<input type="checkbox" checked={this.state.correct} onChange={this.checkBox}/></label>
                 <button onClick={this.handleSubmit} style={{ float: "left"}}>Create</button>
-                <button  onClick={this.onclickRedirect}>Cancel</button>
+                <button onClick={this.onclickRedirect}>Cancel</button>
             </div>
         )
     }

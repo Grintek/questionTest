@@ -4,7 +4,7 @@ import {Redirect, Router} from '@reach/router';
 import Paper from '@material-ui/core/Paper';
 import NotFound from '../NotFound';
 import Navigation from '../container/Navigation';
-import ListQuestion from './ManagerQusestion/ListQuestion';
+import ListQuestion from './ListQuestion/ListQuestion';
 import EditQuestion from './EditQuestion/EditQuestion';
 import AddQuestion from './ManagerQusestion/AddQuestion';
 import AddAnswer from './ManagerQusestion/AddAnswer';

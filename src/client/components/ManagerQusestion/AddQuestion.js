@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import connect from "react-redux/es/connect/connect";
 import {createOneQuestion} from "../../api";
 import PropType from "prop-types";
-import {redirectTo} from "@reach/router";
+import {Redirect} from "@reach/router";
 
 
 class AddQuestion extends Component {
@@ -23,16 +23,10 @@ class AddQuestion extends Component {
    }
 
     static propTypes = {
-        createOneQuestion: PropType.func.isRequired
+        createOneQuestion: PropType.func.isRequired,
     };
 
-    componentDidMount() {
-
-    }
-
-   handleSubmit(event){
-       event.preventDefault();
-       alert("form is submitted " + this.state.description);
+    handleSubmit(){
        if(this.state.description !== "") {
            this.setState({
                redirect: true
@@ -51,19 +45,18 @@ class AddQuestion extends Component {
        this.setState({cancel: true});
     }
     render(){
-       if(this.state.redirect === true & this.state.description !== "" || this.state.cancel === true){
-           return redirectTo("/manager")
+
+       if(this.state.redirect === true || this.state.cancel === true){
+           return <Redirect to="manager"/>
        }
 
         return(
             <div>
-            <form onSubmit={this.handleSubmit}>
                 <div style={{width: "100%", marginBottom: 5}}>
                     <input  type="text" placeholder="name" value={this.state.description} onChange={this.handleChange}/>
                 </div>
-               <button style={{ float: "left"}}>Create</button>
-            </form>
-                <button  onClick={this.onclickRedirect}>Cancel</button>
+                <button onClick={this.handleSubmit} style={{ float: "left"}}>Create</button>
+                <button onClick={this.onclickRedirect}>Cancel</button>
             </div>
         )
     }

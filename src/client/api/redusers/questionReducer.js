@@ -2,7 +2,6 @@
 import {UPDATE_QUESTION, DELETE_QUESTION, CREATE_QUESTION, ADD_ANSWER, QUESTIONS, QUESTION} from '../../constants/QuestionConstants';
 const initialState = {
     question: { id: 0, description: '', answers: [
-
         ] },
     questions: [],
     answer: { correct: '',

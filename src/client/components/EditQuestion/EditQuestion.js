@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {redirectTo} from "@reach/router";
+import {Redirect} from "@reach/router";
 import Button from "@material-ui/core/Button";
 import {connect} from "react-redux/es/alternate-renderers";
 import PropType from "prop-types";
@@ -13,6 +13,7 @@ import { prefixApi } from '../../../etc/configTest';
 class EditQuestion extends Component{
     constructor(props){
         super(props);
+        this.props.fetchOneQuestion(this.props.id);
 
         this.state = {
             selectCorrect: 0,
@@ -48,12 +49,25 @@ class EditQuestion extends Component{
 
                 const answer = response.data.answers.find(x => x.correct === true);
 
-                this.setState({selectCorrect: answer.id});
-
+                if(answer !== undefined) {
+                    this.setState({selectCorrect: answer.id});
+                }
 
                 console.log(response.data.answers);
             })
     };
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        //this.props.fetchOneQuestion(this.props.id);
+        const answer = this.props.quest.question.answers.find(x => x.correct === true);
+
+        if(this.state.selectCorrect !== answer.id) {
+            this.setState({selectCorrect: answer.id});
+        }
+        if(prevProps.quest.question.answers.length !== this.props.quest.question.answers.length){
+            this.props.fetchOneQuestion(this.props.id);
+        }
+    }
 
     toggleCheckbox = label => {
       if(this.selectedCheckboxes.has(label)){
@@ -77,7 +91,6 @@ class EditQuestion extends Component{
         d = d.filter((item) => !a.includes(item));
         console.log(d);
         this.props.updateOneQuestion(this.props.id, this.state.description, d);
-
     }
 
     onclickRedirect(){
@@ -91,7 +104,7 @@ class EditQuestion extends Component{
     render() {
 
         if(this.state.redirect === true){
-            redirectTo(`/manager`)
+           return<Redirect to={"/manager"}/>
         }
 
         const link = `/manager/${this.props.id}/answer`;
@@ -102,8 +115,7 @@ class EditQuestion extends Component{
         console.log(this.state.selectCorrect);
         return(
             <div>
-                 <InputDescription input={this.inputDesk} values={this.state.description}/>
-                <h1>{this.props.id}</h1>
+                <InputDescription input={this.inputDesk} values={this.state.description}/>
                 <table className="tb">
                     <tbody>
                     <tr><th className="tb tb_column_left">Answer</th><th className="tb tb_column_right">Correct</th><th className="tb tb_column_right">Delete</th></tr>

@@ -1,5 +1,4 @@
 import axios from 'axios';
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { prefixApi } from '../../etc/configTest.json';
 import {addAnswer, createQuestion, deleteQuestions, fetchQuestion, fetchQuestions, updateQuestion} from "../actions/QuestionActions";

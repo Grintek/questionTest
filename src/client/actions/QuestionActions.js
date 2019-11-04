@@ -24,10 +24,9 @@ export const createQuestion = (question) => {
         question
     }
 };
-export const deleteQuestions = (question) => {
+export const deleteQuestions = () => {
     return{
         type: DELETE_QUESTION,
-        question
     }
 };
 export const updateQuestion = (question) => {
