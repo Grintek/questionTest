@@ -13,11 +13,16 @@ class PerformTest extends Component {
             indexQuestion: 0,
             indexNullAnswer: 0,
             buttonVisible: true,
-            timeSurvey: new Date()
+            timeSurvey: new Date(),
+            stopTimer: false,
+            hour: 0,
+            minute: 0,
+            second: 0,
         };
 
         this.checkedIDAnswer = this.checkedIDAnswer.bind(this);
         this.thinkCorrectness = this.thinkCorrectness.bind(this);
+        this.funcTime = this.funcTime.bind(this);
     }
 
     static propTypes = {
@@ -66,6 +71,7 @@ class PerformTest extends Component {
             this.setState({idQuestion: null});
             if(this.selectedCheckboxes.length === questions.length){
                 this.setState({buttonVisible: false});
+                this.setState({stopTimer: true});
             }
         }else{
             return null;
@@ -78,6 +84,16 @@ class PerformTest extends Component {
                            style={{width: "8%", marginTop: 40}}>Next</button>
         }
     }
+    funcTime(hour, minute, second){
+
+        console.log(hour, "hour");
+        console.log(minute, "minute");
+        console.log(second, "second");
+        this.setState({hour: hour});
+        this.setState({minute: minute});
+        this.setState({second: second});
+
+    }
 
     resultsFunc() {
         if(!this.state.buttonVisible) {
@@ -88,7 +104,7 @@ class PerformTest extends Component {
                         <tbody>
                         <tr>
                             <td>Testing time:</td>
-                            <td>"Time"</td>
+                            <td>{`${this.state.hour} : ${this.state.minute} : ${this.state.second}`}</td>
                         </tr>
                         <tr>
                             <td>Correct answer</td>
@@ -136,7 +152,7 @@ class PerformTest extends Component {
                 {this.testsFunc(questions)}
                 {this.buttonVisible()}
                 {this.resultsFunc()}
-                <Clock/>
+                <Clock funcTime={this.funcTime} stopTimer={this.state.stopTimer}/>
             </div>
         )
     }

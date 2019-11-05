@@ -6,7 +6,6 @@ export default class Clock extends Component {
         super();
         this.state = { time: {}, seconds: 1 };
         this.timer = 0;
-        this.startTimer = this.startTimer.bind(this);
         this.countDown = this.countDown.bind(this);
     }
 
@@ -33,9 +32,6 @@ export default class Clock extends Component {
         this.timer = setInterval(this.countDown, 1000);
     }
 
-    startTimer() {
-        clearTimeout(this.timer);
-    }
 
     countDown() {
         // Remove one second, set state so a re-render happens.
@@ -44,17 +40,18 @@ export default class Clock extends Component {
             time: this.secondsToTime(seconds),
             seconds: seconds,
         });
+        if (this.props.stopTimer === true) {
+            clearTimeout(this.timer);
+            this.timer = false;
 
-        // Check if we're at zeo.
-        if (seconds == 0) {
-            clearInterval(this.timer);
+            this.props.funcTime(this.state.time.h, this.state.time.m, this.state.time.s);
         }
+
     }
 
     render() {
         return(
             <div>
-                <button onClick={this.startTimer}>Start</button>
                {this.state.time.h}  : {this.state.time.m} : {this.state.time.s}
             </div>
         );
