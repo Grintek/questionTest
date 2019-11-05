@@ -11,7 +11,6 @@ import PopupWindow from "./PopupWindow";
 class ListQuestion extends Component {
     constructor(props){
         super(props);
-        this.props.fetchAllQuestions();
 
         this.state = {
             booleanUpdate: false,
@@ -33,26 +32,8 @@ class ListQuestion extends Component {
     }
 
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log(prevProps.quest.questions.length);
-        console.log(this.props.quest.questions.length);
-        console.log(this.state.booleanUpdate, "componentDidUpdate");
-
-        if(this.props.quest.questions.length !== prevProps.quest.questions.length || this.state.booleanUpdate === true) {
-
-            this.props.fetchAllQuestions();
-
-            if (this.props.quest.questions.length !== prevProps.quest.questions.length) {
-                this.setState(state => {
-                    state.booleanUpdate = false
-                })
-            }
-        }
-    }
-
-    deleteQuestion= (id) =>{
+    deleteQuestion = (id) =>{
         this.props.deleteQuestion(id);
-        console.log(this.props.quest);
         this.setState({ windowVisible: false });
         this.setState({ booleanUpdate: true });
     };
@@ -81,6 +62,7 @@ class ListQuestion extends Component {
     render() {
 
         const {questions} = this.props.quest;
+
         const values = questions.map((e) => {
             return (
                 <tr key={e.id}>

@@ -13,7 +13,6 @@ import { prefixApi } from '../../../../etc/configTest';
 class EditQuestion extends Component{
     constructor(props){
         super(props);
-        this.props.fetchOneQuestion(this.props.id);
 
         this.state = {
             selectCorrect: null,
@@ -67,10 +66,6 @@ class EditQuestion extends Component{
                 if (this.state.selectCorrect !== answer1.id) {
                     this.setState({selectCorrect: answer1.id});
                 }
-            }
-
-            if (this.props.quest.question.answers.length !== prevProps.quest.question.answers.length) {
-                this.props.fetchOneQuestion(this.props.id);
             }
         }
     }

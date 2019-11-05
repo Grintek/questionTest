@@ -49,7 +49,7 @@ export const deleteQuestion = (id) => {
     return (dispatch) => {
         return axios.delete(`${prefixApi}/questions/${id}`)
             .then(response => {
-                dispatch(deleteQuestions(response.data))
+                dispatch(fetchQuestions(response.data))
             })
             .catch(error => {
                 throw(error);
@@ -65,7 +65,7 @@ export const updateOneQuestion = (id, description, answer) => {
             answers: answer
         })
             .then(response => {
-                dispatch(updateQuestion(response.data))
+                dispatch(fetchQuestion(response.data))
             })
             .catch(error => {
                 throw(error);
@@ -80,7 +80,7 @@ export const createOneQuestion = (description) => {
             {headers: {"Content-Type": "application/json"}})
             .then(response => {
                 console.log(response.status);
-                dispatch(createQuestion(response.data))
+                dispatch(fetchQuestions(response.data))
             })
             .catch(error => {
                 console.log(error);
@@ -94,7 +94,7 @@ export const addOneAnswer = (name, correct , id) => {
     return (dispatch) => {
         return axios.post(`${prefixApi}/questions/${id}/answer`, { name: name, correct: correct })
             .then(response => {
-                dispatch(addAnswer(response.data))
+                dispatch(fetchQuestion(response.data))
             })
             .catch(error => {
                 throw(error);
