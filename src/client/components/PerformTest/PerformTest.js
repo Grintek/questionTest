@@ -3,6 +3,7 @@ import connect from "react-redux/es/connect/connect";
 import {fetchAllQuestions, testAllQuestions} from "../../api";
 import Test from "./Test";
 import PropType from "prop-types";
+import Clock from "./Clock";
 
 class PerformTest extends Component {
     constructor(props) {
@@ -11,7 +12,8 @@ class PerformTest extends Component {
             checkedIdAnswer: null,
             indexQuestion: 0,
             indexNullAnswer: 0,
-            buttonVisible: true
+            buttonVisible: true,
+            timeSurvey: new Date()
         };
 
         this.checkedIDAnswer = this.checkedIDAnswer.bind(this);
@@ -55,6 +57,7 @@ class PerformTest extends Component {
                 missed: this.state.indexNullAnswer
             };
 
+            //массив с обьектами который отправим на сервер для подщета
             this.selectedCheckboxes.push(obj);
 
             console.log(this.selectedCheckboxes);
@@ -133,6 +136,7 @@ class PerformTest extends Component {
                 {this.testsFunc(questions)}
                 {this.buttonVisible()}
                 {this.resultsFunc()}
+                <Clock/>
             </div>
         )
     }
