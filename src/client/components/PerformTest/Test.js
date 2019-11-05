@@ -8,14 +8,14 @@ export default class Test extends Component{
                 <h3 style={{marginBottom: 10}}>{this.props.question.description}</h3>
                 {
                     this.props.question.answers.map((e) => {
-                        return <label><input style={{margin: 16}} key={e.id} type="radio"  onClick={() => {
-                            this.props.thinkCorrectness(e.id)
-                        }}/> {e.name}</label>
+                        return <label key={e.id}><input style={{margin: "10px 0px"}}
+                                             onChange={() =>{this.props.checkedIDAnswer(e.id, this.props.id)}}
+                                             checked={this.props.checkedIdAnswer === e.id} type="radio" /> {e.name}</label>
 
                     })
                 }
-                <button style={{width: "8%", margin: 10}}>Next</button>
             </div>
+
         )
     }
 }
