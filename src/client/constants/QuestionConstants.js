@@ -5,3 +5,4 @@ export const UPDATE_QUESTION = "UPDATE_QUESTION";
 export const DELETE_QUESTION = "DELETE_QUESTION";
 export const ADD_ANSWER = "ADD_ANSWER";
 export const QUESTIONS_TEST = "QUESTIONS_TEST";
+export const RESULT_TEST = "RESULT_TEST";

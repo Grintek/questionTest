@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff20bcab-593c-4068-b362-e82726413acb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/client/components/PerformTest/Clock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/actions/QuestionActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/actions/QuestionActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/api/redusers/questionReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/api/redusers/questionReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/components/PerformTest/Clock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/components/PerformTest/Clock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/components/PerformTest/PerformTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/components/PerformTest/PerformTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/constants/QuestionConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/constants/QuestionConstants.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/components/PerformTest/PerformTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="138" column="20" lean-forward="true" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="24" />
+            <state relative-caret-position="296">
+              <caret line="78" column="71" selection-start-line="78" selection-start-column="71" selection-end-line="78" selection-end-column="71" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -29,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/client/components/PerformTest/Clock.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/api/redusers/questionReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-540">
-              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+            <state relative-caret-position="136">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -48,48 +52,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/components/ManagerQusestion/EditQuestion/EditQuestion.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-70">
-              <caret line="37" column="2" lean-forward="true" selection-start-line="37" selection-start-column="2" selection-end-line="39" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/actions/QuestionActions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/components/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/components/App.scss">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/api/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+            <state relative-caret-position="296">
+              <caret line="106" column="27" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="27" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -115,6 +81,7 @@
       <find>button</find>
       <find>console</find>
       <find>selectC</find>
+      <find>star</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -150,17 +117,17 @@
         <option value="$PROJECT_DIR$/src/client/components/ListQuestion/PopupWindow.js" />
         <option value="$PROJECT_DIR$/src/client/components/ManagerQusestion/AddQuestion.js" />
         <option value="$PROJECT_DIR$/src/client/components/EditQuestion/EditQuestion.js" />
-        <option value="$PROJECT_DIR$/src/client/constants/QuestionConstants.js" />
-        <option value="$PROJECT_DIR$/src/client/actions/QuestionActions.js" />
-        <option value="$PROJECT_DIR$/src/client/api/redusers/questionReducer.js" />
         <option value="$PROJECT_DIR$/src/client/components/App.js" />
         <option value="$PROJECT_DIR$/src/client/components/ManagerQusestion/EditQuestion/EditQuestion.js" />
         <option value="$PROJECT_DIR$/src/client/components/ManagerQusestion/ListQuestion/ListQuestion.js" />
         <option value="$PROJECT_DIR$/src/client/components/ManagerQusestion/EditQuestion/Answers.js" />
-        <option value="$PROJECT_DIR$/src/client/api/index.js" />
         <option value="$PROJECT_DIR$/src/client/components/PerformTest/Test.js" />
-        <option value="$PROJECT_DIR$/src/client/components/PerformTest/PerformTest.js" />
         <option value="$PROJECT_DIR$/src/client/components/PerformTest/Clock.js" />
+        <option value="$PROJECT_DIR$/src/client/constants/QuestionConstants.js" />
+        <option value="$PROJECT_DIR$/src/client/actions/QuestionActions.js" />
+        <option value="$PROJECT_DIR$/src/client/api/redusers/questionReducer.js" />
+        <option value="$PROJECT_DIR$/src/client/api/index.js" />
+        <option value="$PROJECT_DIR$/src/client/components/PerformTest/PerformTest.js" />
       </list>
     </option>
   </component>
@@ -261,6 +228,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="question" type="b2602c69:ProjectViewProjectNode" />
+              <item name="question" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="container" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="question" type="b2602c69:ProjectViewProjectNode" />
@@ -367,7 +341,7 @@
       <workItem from="1572798156371" duration="17568000" />
       <workItem from="1572820464154" duration="22642000" />
       <workItem from="1572865445492" duration="30203000" />
-      <workItem from="1572942342834" duration="28948000" />
+      <workItem from="1572942342834" duration="45700000" />
     </task>
     <task id="LOCAL-00001" summary=" commit">
       <created>1572669602653</created>
@@ -453,23 +427,37 @@
       <option name="project" value="LOCAL" />
       <updated>1572982717255</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary=" commit">
+      <created>1572990724092</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1572990724092</updated>
+    </task>
+    <task id="LOCAL-00014" summary=" commit">
+      <created>1572994546805</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1572994546805</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173940000" />
+    <option name="totallyTimeSpent" value="190692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1346" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17762661" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17762661" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32994923" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4988662" visible="true" weight="0.3282572" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4988662" visible="true" weight="0.24027073" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993232" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -594,13 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/cors/LICENSE" />
     <entry file="file://$PROJECT_DIR$/src/client/router.js" />
     <entry file="file://$PROJECT_DIR$/src/client/theme.js">
@@ -662,13 +643,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/components/ListQuestion/ButtonDelete.js" />
-    <entry file="file://$PROJECT_DIR$/src/client/api/combineReducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" selection-start-column="38" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/constants/AppConstants.js" />
     <entry file="file://$PROJECT_DIR$/src/client/main.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -689,15 +663,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/NotFound.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/api/configStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/components/ManagerQusestion/AddAnswer.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -722,23 +687,6 @@
           <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/constants/QuestionConstants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/api/redusers/questionReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="16" lean-forward="true" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#179#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -806,13 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/actions/QuestionActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/components/ManagerQusestion/EditQuestion/EditQuestion.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-70">
@@ -823,13 +764,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/api/index.js">
+    <entry file="file://$PROJECT_DIR$/src/client/constants/QuestionConstants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+        <state relative-caret-position="105">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/api/configStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/actions/QuestionActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/api/combineReducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/api/redusers/questionReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -840,20 +815,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/components/PerformTest/PerformTest.js">
+    <entry file="file://$PROJECT_DIR$/src/client/components/PerformTest/Clock.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="138" column="20" lean-forward="true" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="24" />
+        <state relative-caret-position="656">
+          <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="106" column="27" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="27" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/components/PerformTest/Clock.js">
+    <entry file="file://$PROJECT_DIR$/src/client/components/PerformTest/PerformTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        <state relative-caret-position="296">
+          <caret line="78" column="71" selection-start-line="78" selection-start-column="71" selection-end-line="78" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

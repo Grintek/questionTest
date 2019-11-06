@@ -46,14 +46,11 @@ export default class Clock extends Component {
 
             this.props.funcTime(this.state.time.h, this.state.time.m, this.state.time.s);
         }
-
     }
 
     render() {
         return(
-            <div>
-               {this.state.time.h}  : {this.state.time.m} : {this.state.time.s}
-            </div>
+           null
         );
     }
 }

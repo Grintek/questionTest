@@ -5,7 +5,8 @@ import {
     ADD_ANSWER,
     QUESTIONS,
     QUESTION,
-    QUESTIONS_TEST
+    QUESTIONS_TEST,
+    RESULT_TEST
 } from '../../constants/QuestionConstants';
 
 const initialState = {
@@ -17,6 +18,10 @@ const initialState = {
         correct: '',
         id: 0,
         name: ''
+    },
+    result: {
+        correct: 0,
+        incorrect: 0
     }
 };
 
@@ -36,6 +41,8 @@ export default function questionState(state = initialState, action) {
             return {...state, question: action.question};
         case QUESTIONS_TEST:
             return {...state, questions: action.questions};
+        case RESULT_TEST:
+            return {...state, result: action.result};
         default:
             return state;
     }
