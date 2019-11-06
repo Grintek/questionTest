@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff20bcab-593c-4068-b362-e82726413acb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/actions/QuestionActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/actions/QuestionActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/api/redusers/questionReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/api/redusers/questionReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/components/PerformTest/Clock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/components/PerformTest/Clock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/components/PerformTest/PerformTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/components/PerformTest/PerformTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/constants/QuestionConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/constants/QuestionConstants.js" afterDir="false" />
-    </list>
+    <list default="true" id="ff20bcab-593c-4068-b362-e82726413acb" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -24,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/components/PerformTest/PerformTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="78" column="71" selection-start-line="78" selection-start-column="71" selection-end-line="78" selection-end-column="71" />
+            <state relative-caret-position="311">
+              <caret line="83" column="76" selection-start-line="83" selection-start-column="76" selection-end-line="83" selection-end-column="76" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -341,7 +333,7 @@
       <workItem from="1572798156371" duration="17568000" />
       <workItem from="1572820464154" duration="22642000" />
       <workItem from="1572865445492" duration="30203000" />
-      <workItem from="1572942342834" duration="45700000" />
+      <workItem from="1572942342834" duration="47176000" />
     </task>
     <task id="LOCAL-00001" summary=" commit">
       <created>1572669602653</created>
@@ -441,14 +433,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572994546805</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary=" commit">
+      <created>1573045812496</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1573045812496</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190692000" />
+    <option name="totallyTimeSpent" value="192168000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1346" height="728" extended-state="0" />
+    <frame x="0" y="0" width="1346" height="728" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17762661" />
@@ -834,8 +833,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/components/PerformTest/PerformTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="78" column="71" selection-start-line="78" selection-start-column="71" selection-end-line="78" selection-end-column="71" />
+        <state relative-caret-position="311">
+          <caret line="83" column="76" selection-start-line="83" selection-start-column="76" selection-end-line="83" selection-end-column="76" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
